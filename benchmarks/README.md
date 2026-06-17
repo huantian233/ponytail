@@ -33,7 +33,7 @@ models where the multi-step decision ladder isn't reliably followed.
 
 Tasks: email validator, JS debounce, CSV sum, React countdown, FastAPI rate-limit (see `promptfooconfig.yaml`). Single-shot completions, default temperature.
 
-## Median results (10 runs, 2026-06-13)
+## Median results (10 runs, 2026-06-13; cost re-verified at 30 runs, 2026-06-17)
 
 **Code (lines)**
 
@@ -43,13 +43,13 @@ Tasks: email validator, JS debounce, CSV sum, React countdown, FastAPI rate-limi
 | caveman | 116 | 120 | 67 |
 | **ponytail** | **39** | **44** | **51** |
 
-**Cost (USD, 5 tasks)**
+**Cost (USD, 5 tasks; 30 runs, 2026-06-17)**
 
 | arm | Haiku | Sonnet | Opus |
 |---|--:|--:|--:|
-| baseline (no skill) | 0.032 | 0.141 | 0.135 |
-| caveman | 0.014 | 0.045 | 0.075 |
-| **ponytail** | **0.010** | **0.032** | **0.071** |
+| baseline (no skill) | 0.030 | 0.137 | 0.137 |
+| caveman | 0.014 | 0.046 | 0.072 |
+| **ponytail** | **0.011** | **0.035** | **0.079** |
 
 **Latency (seconds, 5 tasks)**
 
@@ -59,7 +59,7 @@ Tasks: email validator, JS debounce, CSV sum, React countdown, FastAPI rate-limi
 | caveman | 14.9 | 34.7 | 23.1 |
 | **ponytail** | **9.9** | **20.1** | **18.0** |
 
-Versus baseline, ponytail writes **80-94% less code**, costs **47-77% less**, and runs **3-6x faster**, on every model.
+Versus baseline, ponytail writes **80-94% less code**, costs **42-75% less**, and runs **3-6x faster**, on every Claude model. Cost re-verified at 30 reps, with OpenAI and Gemini arms, in [results/2026-06-17-cost-verification.md](results/2026-06-17-cost-verification.md).
 
 ## Metrics
 
